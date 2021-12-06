@@ -24,7 +24,7 @@ public class Tpo {
 
         // Leer número de reinas 
         // (parámetro del programa)
-        nreinas =4;
+        nreinas =40;
 
         // Colocar las reinas en el tablero
         if (nreinas > 0) {
@@ -35,10 +35,11 @@ public class Tpo {
             // (inicialmente, ninguna reina está colocada)
             for (i = 0; i < nreinas; i++) {
                 reinas[i] = -1;
-                System.out.println(reinas[i] + ", ");
+//                System.out.println(reinas[i] + ", ");
             }
+            // Tomamos la hora del sistema en nanosegundos
+            long inicio = System.nanoTime(); 
             // Colocar reinas (algoritmo recursivo)
-            long inicio = System.nanoTime(); // Tomamos la hora del sistema en nanosegundos
             colocarReina(0, reinas, nreinas);
             long fin = System.nanoTime();
             long tTotal = fin - inicio;

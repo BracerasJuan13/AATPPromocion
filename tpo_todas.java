@@ -21,7 +21,7 @@ public class tpo_todas {
 
         // Leer número de reinas 
         // (parámetro del programa)
-        nreinas = 17;
+        nreinas = 8;
 
         // Colocar las reinas en el tablero
         if (nreinas > 0) {
@@ -90,9 +90,7 @@ public class tpo_todas {
 //   fila   - Fila de la reina que queremos colocar
 //   reinas - Vector con las posiciones de las reinas
 //   n      - Número de reinas
-// Resultado
-//   TRUE si se coloca correctamente la reina
-//   FALSE si no se ha podido colocar la reina
+
     public static void colocarReina(int fila, int reinas[], int n) {
         if (fila < n) {
             //System.out.println("entro en if");
