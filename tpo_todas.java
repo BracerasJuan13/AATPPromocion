@@ -74,7 +74,6 @@ public class tpo_todas {
     public static boolean comprobar(int fila, int reinas[]) {
         int i;
         boolean resultado;
-
         for (i = 0; i < fila; i++) {
             if ((reinas[i] == reinas[fila]) // Misma columna
                     || (Math.abs(fila - i) == Math.abs(reinas[fila] - reinas[i]))) {  // Misma diagonal
@@ -93,31 +92,22 @@ public class tpo_todas {
 
     public static void colocarReina(int fila, int reinas[], int n) {
         if (fila < n) {
-            //System.out.println("entro en if");
-
             // Quedan reinas por colocar
             for (reinas[fila] = 0; reinas[fila] < n; reinas[fila]++) {
-                // Comprobamos si la posición 
-                // de la reina actual es válida
-               // System.out.println("Fila:" + fila + " / Columna:" + reinas[fila] + ": " + comprobar(fila, reinas));
+                // Comprobamos si la posición de la reina actual es válida
+// System.out.println("Fila:" + fila + " / Columna:" + reinas[fila] + ": " + comprobar(fila, reinas));
                 if (comprobar(fila, reinas)) {
-
-                    // Si es así, intentamos colocar
-                    // las reinas restantes
+                    // Si es así, intentamos colocar las reinas restantes
                     colocarReina(fila + 1, reinas, n);
-
                 }
             }
         } else {
-            //System.out.println("backtracking----------------");
-
-            // No quedan reinas por colocar (caso base)
+// No quedan reinas por colocar (caso base)
 //            int i;
 //            for (i = 0; i < n - 1; i++) {
 //                System.out.print(reinas[i] + ", ");
 //            }
 //            System.out.println(reinas[i++]);
-
         }
     }
 }
